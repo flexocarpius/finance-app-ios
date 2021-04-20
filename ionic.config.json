@@ -1,0 +1,7 @@
+{
+  "name": "FinanceAppIos",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,4 +1,4 @@
-<ion-tabs>
+<!-- <ion-tabs>
 
   <ion-tab-bar slot="bottom">
     <ion-tab-button tab="overview">
@@ -22,4 +22,9 @@
     </ion-tab-button>
   </ion-tab-bar>
 
-</ion-tabs>
+</ion-tabs> -->
+<ion-content>
+  <ion-router-outlet></ion-router-outlet>
+  <app-animated-tabs [tab]="tab" (change)="onTabChange($event)">
+  </app-animated-tabs>
+</ion-content>

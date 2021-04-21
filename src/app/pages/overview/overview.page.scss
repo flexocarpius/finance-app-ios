@@ -1,8 +1,22 @@
+ion-header {
+    height: 0px;
+    display: none;
+}
+
 .top-container {
     border-bottom-left-radius: 12px;
     border-bottom-right-radius: 12px;
     background-color: #2A327D;
     padding-bottom: 10px;
+    background-image: url('/assets/top-bg.svg');
+    margin-top: -18px;
+
+    .title {
+        color: #fff;
+        padding-top: 20px;
+        padding-left: 30px;
+        margin-bottom: 0;
+    }
 }
 
 .recent-transactions {
@@ -11,15 +25,18 @@
 
 .weekly-container {
     padding: 0px 24px;
+    
     .progress-container {
         display: flex;
         width: 100%;
         justify-content: space-evenly;
     
         .weekly-progress {
+            width: 40px;
             height: 120px;
             display: flex;
             flex-direction: column;
+            align-items: center;
         
             .label {
                 font-size: 13px;

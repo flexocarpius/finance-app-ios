@@ -1,0 +1,41 @@
+.expandable-button {
+    width: 110px;
+    height: 35px;
+    will-change: width;
+    transition: background-color ease-in-out 0.3s, color ease-in-out 0.3s, transform ease-in-out 0.3s;
+    background-color: #EBEDFF;
+    color: #2A327D;
+    border-radius: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+
+    ::ng-deep ion-icon {
+        font-size: 24px;
+    }
+
+    ::ng-deep .label {
+        margin-left: 8px;
+    }
+
+    ::ng-deep &:first-child {
+        margin-left: 0px;
+    }
+
+    ::ng-deep &:last-child {
+        margin-right: 0px;
+    }
+
+    ::ng-deep &.collapsed {
+        width: 35px;
+        color: #C0C2D1;
+        background-color: transparent;
+        margin: 0;
+
+        .label {
+            max-width: 0px;
+            display: none;
+        }
+    }
+}

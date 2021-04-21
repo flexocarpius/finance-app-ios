@@ -1,0 +1,18 @@
+<div class="container">
+  <app-animated-tab name="overview" [collapsed]="tab !== 'overview'" (onTabClick)="tabClick($event)">
+    <ion-icon name="card-outline"></ion-icon>
+    <span class="label">Overview</span>
+  </app-animated-tab>
+  <app-animated-tab name="analytics" [collapsed]="tab !== 'analytics'" (onTabClick)="tabClick($event)">
+    <ion-icon name="analytics-outline"></ion-icon>
+    <span class="label">Analytics</span>
+  </app-animated-tab>
+  <app-animated-tab name="downloads" [collapsed]="tab !== 'downloads'" (onTabClick)="tabClick($event)">
+    <ion-icon name="download-outline"></ion-icon>
+    <span class="label">Downloads</span>
+  </app-animated-tab>
+  <app-animated-tab name="account" [collapsed]="tab !== 'account'" (onTabClick)="tabClick($event)">
+    <ion-icon name="person-circle-outline"></ion-icon>
+    <span class="label">Account</span>
+  </app-animated-tab>
+</div>

@@ -9,7 +9,7 @@ import { OverviewPageRoutingModule } from './overview-routing.module';
 import { OverviewPage } from './overview.page';
 import { CardListComponent } from '../../components/card-list/card-list.component';
 import { SharedModule } from '../../shared/shared.module';
-import { TransactionRowModule } from 'src/app/components/transaction-row/transaction-row.module';
+import { TransactionRowModule } from '../../components/transaction-row/transaction-row.module';
 
 @NgModule({
   imports: [
@@ -18,7 +18,7 @@ import { TransactionRowModule } from 'src/app/components/transaction-row/transac
     IonicModule,
     OverviewPageRoutingModule,
     SharedModule,
-    TransactionRowModule
+    TransactionRowModule,
   ],
   declarations: [OverviewPage, CardListComponent]
 })

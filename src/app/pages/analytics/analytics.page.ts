@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import * as Chart from 'chart.js';
+import ChartDataLabels from 'chartjs-plugin-datalabels';
+import { CategoryModel } from 'src/app/models/category.model';
 
 @Component({
   selector: 'app-analytics',
@@ -6,10 +9,99 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./analytics.page.scss'],
 })
 export class AnalyticsPage implements OnInit {
+  chart: any;
+  labels: any;
+  data: any;
+  options: any;
+  colors: any;
+  datasets: any;
+  categories: CategoryModel[] = [
+    {
+      color: '#FE645A',
+      title: 'Money Savings',
+      value: 18409
+    },
+    {
+      color: '#2A327D',
+      title: 'Expenses',
+      value: 1409
+    },
+    {
+      color: '#FFB039',
+      title: 'Transfer',
+      value: 65955
+    },
+    {
+      color: '#00C689',
+      title: 'Fees',
+      value: 652
+    },
+  ];
 
   constructor() { }
 
   ngOnInit() {
+    this.initChart([
+      'Expenses',
+      'Transfer',
+      'Fees',
+      'Money Saving'
+    ], [1409, 6595, 652, 3840]);
   }
 
+  initChart(labels, data) {
+    Chart.plugins.register(ChartDataLabels);
+    this.datasets = [
+      {
+        data,
+        backgroundColor: [
+          '#FE645A',
+          '#2A327D',
+          '#FFB039',
+          '#00C689',
+        ],
+        borderColor: [
+          '#FE645A',
+          '#2A327D',
+          '#FFB039',
+          '#00C689',
+        ],
+        hoverBackgroundColor: [
+          '#FE645A',
+          '#2A327D',
+          '#FFB039',
+          '#00C689',
+        ],
+        datalabels: {
+          color: '#fff',
+          font: {
+            size: 16
+          }
+        }
+      }
+    ];
+    this.labels = labels;
+    this.data = data;
+    this.options = {
+      responsive: true,
+      maintainAspectRatio: false,
+      legend: {
+        display: false,
+      },
+      plugins: {
+        datalabels: {
+          formatter: function(value, context) {
+            const data = context.chart.data.datasets[0].data.reduce((d, acc) => d + acc);
+            return `${Math.round((value/data) * 100)}%`;
+          }
+        }
+      }
+    };
+    this.colors = [
+      '#FE645A',
+      '#2A327D',
+      '#FFB039',
+      '#00C689',
+    ];
+  }
 }

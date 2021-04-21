@@ -5,7 +5,7 @@
 </ion-header>
 
 <ion-content>
-  <div class="empty-container">
+  <div class="empty-container" *ngIf="categories?.length === 0">
     <div class="empty-message">
       <ion-img class="empty-img" src="/assets/no-data-folder.svg"></ion-img>
       <h4 class="title">Oops! No Data</h4>
@@ -16,5 +16,35 @@
         </app-circle-button>
       </div>
     </div>
+  </div>
+  <div class="container" [hidden]="categories?.length === 0">
+    <div class="header">
+      <div>
+        <h5 class="subtitle">Data Analytics</h5>
+        <h4 class="title">College Savings</h4>
+      </div>
+      <app-rounded-button color="success">
+        <ion-icon name="swap-horizontal-outline"></ion-icon>
+      </app-rounded-button>
+    </div>
+    <div class="chart-container">
+      <div class="chart">
+        <canvas baseChart chartType="doughnut" [labels]="labels" [datasets]="datasets" [options]="options" id="chart"></canvas>
+        <div class="message">
+          <h4 class="title">This month</h4>
+          <h5 class="subtitle">20 days</h5>
+        </div>
+      </div>
+    </div>
+    <div class="list-container">
+      <div class="list-item" *ngFor="let category of categories">
+        <div>
+          <span class="list-bullet" [style.background-color]="category.color"></span>
+          <h4 class="list-text">{{ category.title }}</h4>
+        </div>
+        <h4 class="list-text">{{ category.value | currency }}</h4>
+      </div>
+    </div>
+    <div class="tab-bar"></div>
   </div>
 </ion-content>

@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { AnalyticsPageRoutingModule } from './analytics-routing.module';
 
 import { AnalyticsPage } from './analytics.page';
+import { SharedModule } from 'src/app/shared/shared.module';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    AnalyticsPageRoutingModule
+    AnalyticsPageRoutingModule,
+    SharedModule
   ],
   declarations: [AnalyticsPage]
 })

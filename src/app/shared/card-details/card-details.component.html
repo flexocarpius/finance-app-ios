@@ -1,15 +1,20 @@
 <div class="card-container">
-  <div class="row">
-    <h4 class="gray">{{ card.date | date: 'dd/MM/yyyy' }}</h4>
+  <div>
     <div class="row">
-      <h4 class="black">{{ card.negative }}</h4>
-      <h4 class="black ml-1">{{ card.positive }}</h4>
+      <h4 class="gray">{{ card.date | date: 'dd/MM/yyyy' }}</h4>
+      <div class="row">
+        <h4 class="black"><span class="danger">-</span>{{ card.negative | currency }}</h4>
+        <h4 class="black ml-1"><span class="success">+</span>{{ card.positive | currency }}</h4>
+      </div>
+    </div>
+    <div class="row">
+      <app-progress-bar class="progress-bar" [positive]="card.positive" [negative]="card.negative"></app-progress-bar>
     </div>
   </div>
   <div class="row">
     <div>
       <h4 class="gray">{{ card.title }}</h4>
-      <h4 class="black total">{{ card.total }}</h4>
+      <h4 class="black total">{{ card.total | currency }}</h4>
     </div>
     <div class="rounded-button">
       <ion-icon name="add-outline"></ion-icon>

@@ -1,0 +1,31 @@
+.top-container {
+    border-bottom-left-radius: 12px;
+    border-bottom-right-radius: 12px;
+    background-color: #2A327D;
+    padding-bottom: 10px;
+}
+
+.recent-transactions {
+    margin: 24px;
+}
+
+.weekly-container {
+    padding: 0px 24px;
+    .progress-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+    
+        .weekly-progress {
+            height: 120px;
+            display: flex;
+            flex-direction: column;
+        
+            .label {
+                font-size: 13px;
+                color: #C0C2D1;
+                margin-top: 4px;
+            }
+        }
+    }
+}

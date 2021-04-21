@@ -1,0 +1,27 @@
+<ion-header translucent="true">
+  <ion-toolbar>
+    <ion-title>Overview</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content fullscreen="true">
+  <div class="top-container">
+    <ion-toolbar collapse="condense">
+      <ion-title size="large">Overview</ion-title>
+    </ion-toolbar>
+    <app-card-list></app-card-list>
+  </div>
+  <div class="recent-transactions">
+    <h4>Recent transactions</h4>
+    <app-transaction-row *ngFor="let transaction of transactions" [transaction]="transaction"></app-transaction-row>
+  </div>
+  <div class="weekly-container">
+    <h4>Weekly Report</h4>
+    <div class="progress-container">
+      <div class="weekly-progress" *ngFor="let day of days">
+        <app-vertical-progress-bar [percent]="day.percent"></app-vertical-progress-bar>
+        <span class="label">{{ day.label }}</span>
+      </div>
+    </div>
+  </div>
+</ion-content>

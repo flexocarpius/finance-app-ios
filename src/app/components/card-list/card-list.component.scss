@@ -1,0 +1,10 @@
+.container {
+    display: flex;
+    position: relative;
+    overflow-x: scroll;
+    width: 100%;
+
+    .card-container {
+        display: flex;
+    }
+}

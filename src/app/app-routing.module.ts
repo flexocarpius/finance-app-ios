@@ -5,6 +5,26 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'analytics',
+    loadChildren: () => import('./pages/analytics/analytics.module').then( m => m.AnalyticsPageModule)
+  },
+  {
+    path: 'overview',
+    loadChildren: () => import('./pages/overview/overview.module').then( m => m.OverviewPageModule)
+  },
+  {
+    path: 'downloads',
+    loadChildren: () => import('./pages/downloads/downloads.module').then( m => m.DownloadsPageModule)
+  },
+  {
+    path: 'account',
+    loadChildren: () => import('./pages/account/account.module').then( m => m.AccountPageModule)
+  },
+  {
+    path: 'new-folder',
+    loadChildren: () => import('./pages/new-folder/new-folder.module').then( m => m.NewFolderPageModule)
   }
 ];
 @NgModule({

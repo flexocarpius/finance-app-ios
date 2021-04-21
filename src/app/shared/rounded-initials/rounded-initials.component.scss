@@ -1,0 +1,21 @@
+.container {
+    width: 45px;
+    height: 45px;
+    padding: 12px;
+    border-radius: 50%;
+
+    .initials {
+        font-size: 14px;
+        color: white;
+        line-height: 19px;
+        text-transform: uppercase;
+    }
+}
+
+.success {
+    background-color: var(--ion-color-success);
+}
+
+.danger {
+    background-color: var(--ion-color-danger);
+}

@@ -1,0 +1,18 @@
+<div class="card-container">
+  <div class="row">
+    <h4 class="gray">{{ card.date | date: 'dd/MM/yyyy' }}</h4>
+    <div class="row">
+      <h4 class="black">{{ card.negative }}</h4>
+      <h4 class="black ml-1">{{ card.positive }}</h4>
+    </div>
+  </div>
+  <div class="row">
+    <div>
+      <h4 class="gray">{{ card.title }}</h4>
+      <h4 class="black total">{{ card.total }}</h4>
+    </div>
+    <div class="rounded-button">
+      <ion-icon name="add-outline"></ion-icon>
+    </div>
+  </div>
+</div>

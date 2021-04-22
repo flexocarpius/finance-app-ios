@@ -7,7 +7,7 @@
 <ion-content fullscreen="true">
   <div class="top-container">
     <h2 class="title">Overview</h2>
-    <app-card-list></app-card-list>
+    <app-card-list (addExpenseClick)="onAddExpenseClick($event)"></app-card-list>
   </div>
   <div class="recent-transactions">
     <h4 class="title">Recent transactions</h4>

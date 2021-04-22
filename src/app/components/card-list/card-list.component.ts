@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CardDetailsModel } from '../../models/card-details.model';
 
 @Component({
@@ -7,6 +7,8 @@ import { CardDetailsModel } from '../../models/card-details.model';
   styleUrls: ['./card-list.component.scss'],
 })
 export class CardListComponent implements OnInit {
+  @Output() addExpenseClick = new EventEmitter();
+
   cards: CardDetailsModel[] = [
     {
       title: 'College Saving',
@@ -27,5 +29,9 @@ export class CardListComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {}
+
+  onAddClick(card: CardDetailsModel) {
+    this.addExpenseClick.emit(card);
+  }
 
 }

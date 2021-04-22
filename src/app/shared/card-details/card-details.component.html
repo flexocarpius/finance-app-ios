@@ -16,7 +16,7 @@
       <h4 class="gray">{{ card.title }}</h4>
       <h4 class="black total">{{ card.total | currency }}</h4>
     </div>
-    <div class="rounded-button">
+    <div class="rounded-button" (click)="onAddClick()">
       <ion-icon name="add-outline"></ion-icon>
     </div>
   </div>

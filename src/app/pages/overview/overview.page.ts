@@ -1,5 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { IonContent } from '@ionic/angular';
+import { CardDetailsModel } from 'src/app/models/card-details.model';
 import { TransactionModel } from 'src/app/models/transaction.model';
 
 @Component({
@@ -40,7 +42,7 @@ export class OverviewPage implements OnInit {
     }
   ];
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
     this.transactions = [
@@ -59,4 +61,7 @@ export class OverviewPage implements OnInit {
     ]
   }
 
+  onAddExpenseClick(card: CardDetailsModel) {
+    this.router.navigate(['/new-folder']);
+  }
 }

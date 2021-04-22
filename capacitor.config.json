@@ -1,6 +1,6 @@
 {
-  "appId": "io.ionic.starter",
-  "appName": "FinanceAppIos",
+  "appId": "com.nielsmrk.financeapp",
+  "appName": "Finance",
   "bundledWebRuntime": false,
   "npmClient": "npm",
   "webDir": "www",

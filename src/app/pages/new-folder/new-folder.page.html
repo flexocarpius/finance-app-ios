@@ -1,9 +1,37 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>new-folder</ion-title>
+    <ion-title>New folder</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <div class="container" *ngIf="showContainerSuccess === false">
+    <div class="header">
+      <ion-icon name="arrow-back-outline" class="icon"></ion-icon>
+      <h4 class="title">New Folder</h4>
+      <div class="empty"></div>
+    </div>
+    <div class="form">
+      <app-input class="form-input" label="Name" placeholder="Enter the folder name"></app-input>
+      <app-select class="form-input" label="Wallet" placeholder="Select your wallet"></app-select>
+      <app-select class="form-input" label="Report Type" placeholder="Select your template"></app-select>
+      <app-switch class="form-input" title="Limit Expense" subtitle="We'll send you a notification" [selected]="true"></app-switch>
+      <app-switch class="form-input" title="Auto Backup" subtitle="We will save your data" [selected]="false"></app-switch>
+      <app-fab-button color="success" class="submit-button" (click)="onSaveFolder()">
+        <h4 class="text">Save Folder</h4>
+      </app-fab-button>
+    </div>
+  </div>
+  <div class="container-success" *ngIf="showContainerSuccess === true">
+    <div class="message">
+      <ion-img class="img" src="/assets/success-folder.svg"></ion-img>
+      <h4 class="title">Well Done!</h4>
+      <h4 class="subtitle">Your folder is ready to start reporting</h4>
+      <div class="buttons">
+        <app-fab-button color="success" (click)="onViewFolder()">
+          <h4 class="text">View Folder</h4>
+        </app-fab-button>
+      </div>
+    </div>
+  </div>
 </ion-content>

@@ -1,0 +1,27 @@
+.container {
+    display: flex;
+    flex-direction: column;
+
+    .label {
+        font-size: 16px;
+        color: #262D30;
+        margin: 0;
+    }
+
+    .input {
+        border-radius: 58px;
+        height: 45px;
+        display: flex;
+        align-items: center;
+        background-color: #fff;
+        border-style: none;
+        border: 1px solid #E1E4EA;
+        padding: 0px 22px;
+        margin-top: 6px;
+    }
+
+    input:focus { 
+        outline: none !important;
+        border-color: #babcc0;
+    }
+}

@@ -3,11 +3,14 @@
     height: 45px;
     padding: 12px;
     border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .initials {
+        width: 45px;
         font-size: 14px;
         color: white;
-        line-height: 19px;
         text-transform: uppercase;
     }
 }

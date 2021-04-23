@@ -1,0 +1,52 @@
+ion-header {
+    display: none;
+}
+
+.container {
+
+    .img-container {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        margin: 32px 0px;
+
+        .rounded-img {
+            width: 112px;
+            height: 112px;
+            background-color: #C4C4C4;
+            border-radius: 50%;
+        }
+    }
+    
+
+    .name-container {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 24px 0px;
+
+        .name {
+            font-size: 18px;
+            color: #262D30;
+            margin: 0;
+            text-align: center;
+        }
+    
+        .email {
+            font-size: 18px;
+            color: #262D30;
+            margin: 0;
+            text-align: center;
+        }
+    }
+
+    .form {
+        margin: 24px;
+
+        .form-control {
+            margin: 16px 0px;
+        }
+    }
+}

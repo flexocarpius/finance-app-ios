@@ -1,11 +1,11 @@
 <svg width="375" height="290" viewBox="0 0 375 290" fill="none" xmlns="http://www.w3.org/2000/svg">
-<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="375" height="290">
-<path d="M0 0H375V270C375 281.046 366.046 290 355 290H20C8.95431 290 0 281.046 0 270V0Z" fill="#2A327D"/>
+<mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="0" y="-81" width="375" height="371">
+<path d="M0 -81H375V270C375 281.046 366.046 290 355 290H20C8.95431 290 0 281.046 0 270V-81Z" fill="#2A327D"/>
 </mask>
 <g mask="url(#mask0)">
-<path d="M0 0H375V270C375 281.046 366.046 290 355 290H20C8.95431 290 0 281.046 0 270V0Z" fill="#2A327D"/>
-<circle cx="332" cy="15" r="94" fill="#00C689"/>
-<circle cx="-0.5" cy="260.5" r="48.5" fill="#FE645A"/>
-<circle cx="247" cy="311" r="77" fill="#FFB039"/>
+<path d="M0 -81H375V270C375 281.046 366.046 290 355 290H20C8.95431 290 0 281.046 0 270V-81Z" fill="#2A327D"/>
+<ellipse cx="332" cy="-61.8103" rx="94" ry="120.255" fill="#00C689"/>
+<ellipse cx="-0.5" cy="252.26" rx="48.5" ry="62.0466" fill="#FE645A"/>
+<ellipse cx="247" cy="316.866" rx="77" ry="98.5069" fill="#FFB039"/>
 </g>
 </svg>

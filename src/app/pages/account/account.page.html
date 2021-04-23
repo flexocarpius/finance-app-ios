@@ -1,9 +1,29 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>account</ion-title>
+    <ion-title>Account</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <app-toolbar title="Account" position="center"></app-toolbar>
+  <div class="container">
+    <div class="img-container">
+      <div class="rounded-img"></div>
+    </div>
+    <div class="name-container">
+      <h4 class="name">Joe Doe</h4>
+      <h4 class="email">joe.doe@gmail.com</h4>
+    </div>
+    <div class="form">
+      <div class="form-control">
+        <app-switch title="Notifications" subtitle="Important messages only" [selected]="true"></app-switch>
+      </div>
+      <div class="form-control">
+        <app-option title="Profile" subtitle="Edit your information"></app-option>
+      </div>
+      <div class="form-control">
+        <app-option title="Interface" subtitle="Configure your application"></app-option>
+      </div>
+    </div>
+  </div>
 </ion-content>

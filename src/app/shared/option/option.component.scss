@@ -1,0 +1,22 @@
+.container {
+    display: flex;
+    align-items: left;
+
+    .text-container {
+        display: flex;
+        flex-direction: column;
+
+        .title {
+            font-size: 16px;
+            color: #262D30;
+            margin: 0;
+        }
+
+        .subtitle {
+            font-size: 14px;
+            color: #C0C2D1;
+            margin: 0;
+            margin-top: 4px;
+        }
+    }
+}

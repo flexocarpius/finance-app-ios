@@ -9,7 +9,9 @@ ion-header {
     background-color: #2A327D;
     padding-bottom: 10px;
     background-image: url('/assets/top-bg.svg');
+    background-size: cover;
     margin-top: -18px;
+    padding-top: 24px;
 
     .title {
         color: #fff;

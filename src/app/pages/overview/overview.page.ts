@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { IonContent, ModalController } from '@ionic/angular';
 import { CardDetailsModel } from 'src/app/models/card-details.model';
 import { TransactionModel } from 'src/app/models/transaction.model';
+import { StatusBarService } from 'src/app/services/status-bar.service';
 import { NewTransactionPage } from '../new-transaction/new-transaction.page';
 
 @Component({
@@ -43,7 +44,7 @@ export class OverviewPage implements OnInit {
     }
   ];
 
-  constructor(private router: Router, private modal: ModalController) { }
+  constructor(private router: Router, private modal: ModalController, private statusBar: StatusBarService) { }
 
   ngOnInit() {
     this.transactions = [
@@ -60,6 +61,16 @@ export class OverviewPage implements OnInit {
         value: 96506223
       }
     ]
+  }
+
+  ionViewWillEnter() {
+    this.statusBar.setDarkStatusBar();
+    console.log('Dark status bar');
+  }
+
+  ionViewWillLeave() {
+    this.statusBar.setLightStatusBar();
+    console.log('Light status bar');
   }
 
   async onAddExpenseClick(card: CardDetailsModel) {

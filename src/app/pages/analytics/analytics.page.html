@@ -17,16 +17,14 @@
       </div>
     </div>
   </div>
-  <div class="container" [hidden]="categories?.length === 0">
-    <div class="header">
-      <div>
-        <h5 class="subtitle">Data Analytics</h5>
-        <h4 class="title">College Savings</h4>
-      </div>
+  <app-toolbar [hidden]="categories?.length === 0" title="College Savings" subtitle="Data Analytics" position="left">
+    <div rightButtons>
       <app-rounded-button color="success">
         <ion-icon name="swap-horizontal-outline"></ion-icon>
       </app-rounded-button>
     </div>
+  </app-toolbar>
+  <div class="container" [hidden]="categories?.length === 0">
     <div class="chart-container">
       <div class="chart">
         <canvas baseChart chartType="doughnut" [labels]="labels" [datasets]="datasets" [options]="options" id="chart"></canvas>

@@ -8,8 +8,9 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class ToolbarComponent implements OnInit {
   @Input() title: string = '';
   @Input() subtitle: string = '';
-  @Input() position: 'left' | 'right' | 'center';
+  @Input() position: 'left' | 'center';
   @Input() backButton: boolean = false;
+  @Input() color: 'dark' | 'light' = 'light';
 
   @Output() onBack = new EventEmitter();
 

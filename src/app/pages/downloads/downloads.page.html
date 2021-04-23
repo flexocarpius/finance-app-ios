@@ -5,7 +5,13 @@
 </ion-header>
 
 <ion-content>
-  <app-toolbar title="All reports" subtitle="Downloaded reports" position="center"></app-toolbar>
+  <app-toolbar title="All reports" subtitle="Downloaded reports" position="center">
+    <div leftButtons>
+      <ion-button fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </app-toolbar>
   <div class="container">
     <div class="row" *ngFor="let report of reports">
       <div class="text-container">

@@ -7,6 +7,10 @@ ion-header {
     flex-direction: column;
     margin: 0px 24px;
 
+    .button {
+        margin: 0;
+    }
+
     .row {
         display: flex;
         align-items: center;

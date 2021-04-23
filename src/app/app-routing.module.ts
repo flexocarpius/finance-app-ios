@@ -25,6 +25,10 @@ const routes: Routes = [
   {
     path: 'new-folder',
     loadChildren: () => import('./pages/new-folder/new-folder.module').then( m => m.NewFolderPageModule)
+  },
+  {
+    path: 'new-transaction',
+    loadChildren: () => import('./pages/new-transaction/new-transaction.module').then( m => m.NewTransactionPageModule)
   }
 ];
 @NgModule({

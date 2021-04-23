@@ -1,0 +1,14 @@
+<div class="toolbar-container">
+  <div class="left-button-container">
+    <ion-button *ngIf="backButton === true" fill="clear" (click)="onBackButtonClick()">
+      <ion-icon name="arrow-back-outline"></ion-icon>
+    </ion-button>
+  </div>
+  <div class="text-container" [ngClass]="{left: position === 'left', right: position === 'right', center: position === 'center'}">
+    <h5 class="subtitle" *ngIf="subtitle !== ''">{{ subtitle }}</h5>
+    <h3 class="title" *ngIf="title !== ''">{{ title }}</h3>
+  </div>
+  <div class="right-button-container">
+
+  </div>
+</div>

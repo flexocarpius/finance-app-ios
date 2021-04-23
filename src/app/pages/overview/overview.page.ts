@@ -1,8 +1,9 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonContent } from '@ionic/angular';
+import { IonContent, ModalController } from '@ionic/angular';
 import { CardDetailsModel } from 'src/app/models/card-details.model';
 import { TransactionModel } from 'src/app/models/transaction.model';
+import { NewTransactionPage } from '../new-transaction/new-transaction.page';
 
 @Component({
   selector: 'app-overview',
@@ -18,31 +19,31 @@ export class OverviewPage implements OnInit {
     },
     {
       label: 'Mon',
-      percent: 66
+      percent: 33
     },
     {
       label: 'Tue',
-      percent: 66
+      percent: 50
     },
     {
       label: 'Wed',
-      percent: 66
+      percent: 10
     },
     {
       label: 'Thu',
-      percent: 66
+      percent: 70
     },
     {
       label: 'Fri',
-      percent: 66
+      percent: 30
     },
     {
       label: 'Sat',
-      percent: 66
+      percent: 0
     }
   ];
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private modal: ModalController) { }
 
   ngOnInit() {
     this.transactions = [
@@ -61,7 +62,14 @@ export class OverviewPage implements OnInit {
     ]
   }
 
-  onAddExpenseClick(card: CardDetailsModel) {
-    this.router.navigate(['/new-folder']);
+  async onAddExpenseClick(card: CardDetailsModel) {
+    const modal = await this.modal.create({
+      component: NewTransactionPage,
+      swipeToClose: true,
+      componentProps: {
+        card
+      }
+    });
+    return await modal.present();
   }
 }

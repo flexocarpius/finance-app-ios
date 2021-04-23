@@ -12,13 +12,14 @@ import { InputComponent } from './input/input.component';
 import { SelectComponent } from './select/select.component';
 import { SwitchComponent } from './switch/switch.component';
 import { FabButtonComponent } from './fab-button/fab-button.component';
+import { ToolbarComponent } from './toolbar/toolbar.component';
 
 @NgModule({
     declarations: [CardDetailsComponent, TransactionDetailComponent, RoundedButtonComponent, RoundedInitialsComponent, VerticalProgressBarComponent,
-        ProgressBarComponent, CircleButtonComponent, InputComponent, SelectComponent, SwitchComponent, FabButtonComponent],
+        ProgressBarComponent, CircleButtonComponent, InputComponent, SelectComponent, SwitchComponent, FabButtonComponent, ToolbarComponent],
     imports: [CommonModule, IonicModule.forRoot()],
     exports: [CardDetailsComponent, TransactionDetailComponent, RoundedButtonComponent, RoundedInitialsComponent, VerticalProgressBarComponent,
-        ProgressBarComponent, CircleButtonComponent, InputComponent, SelectComponent, SwitchComponent, FabButtonComponent],
+        ProgressBarComponent, CircleButtonComponent, InputComponent, SelectComponent, SwitchComponent, FabButtonComponent, ToolbarComponent],
     providers: [],
 })
 export class SharedModule {}

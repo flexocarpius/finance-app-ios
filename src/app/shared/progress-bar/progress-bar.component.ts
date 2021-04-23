@@ -19,7 +19,6 @@ export class ProgressBarComponent implements OnInit {
     const total = Math.abs(this.positive) + Math.abs(this.negative);
     this.positiveStyle = `width: ${(this.positive / total) * 100}%`;
     this.negativeStyle = `width: ${(this.negative / total) * 100}%`;
-    console.log(total, this.positive/total, this.negative/total);
   }
 
 }

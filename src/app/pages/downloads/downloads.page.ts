@@ -6,6 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./downloads.page.scss'],
 })
 export class DownloadsPage implements OnInit {
+  reports = [
+    {
+      name: 'My monthly report',
+    },
+    {
+      name: 'General report',
+    },
+    {
+      name: 'Expenses report',
+    },
+  ];
 
   constructor() { }
 

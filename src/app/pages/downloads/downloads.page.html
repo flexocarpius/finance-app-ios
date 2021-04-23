@@ -1,9 +1,22 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>downloads</ion-title>
+    <ion-title>Downloads</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-
+  <app-toolbar title="All reports" subtitle="Downloaded reports" position="center"></app-toolbar>
+  <div class="container">
+    <div class="row" *ngFor="let report of reports">
+      <div class="text-container">
+        <h4 class="title">{{ report.name }}</h4>
+        <span class="subtitle">1 day ago</span>
+      </div>
+      <div class="button-container">
+        <ion-button fill="clear">
+          <ion-icon name="download-outline"></ion-icon>
+        </ion-button>
+      </div>
+    </div>
+  </div>
 </ion-content>

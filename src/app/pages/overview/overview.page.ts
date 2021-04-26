@@ -64,13 +64,11 @@ export class OverviewPage implements OnInit {
   }
 
   ionViewWillEnter() {
-    this.statusBar.setDarkStatusBar();
-    console.log('Dark status bar');
+    this.statusBar.setLightStatusBar();
   }
 
   ionViewWillLeave() {
     this.statusBar.setLightStatusBar();
-    console.log('Light status bar');
   }
 
   async onAddExpenseClick(card: CardDetailsModel) {

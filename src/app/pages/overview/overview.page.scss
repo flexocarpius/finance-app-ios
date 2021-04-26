@@ -4,76 +4,61 @@ ion-header {
 }
 
 ion-content {
-    --ion-background-color: #2a327d;
     overflow-y: hidden; 
 }
 
-.container {
-    overflow-y: scroll;
+.top-container {
+    border-radius: 12px;
+    padding-bottom: 10px;
+    background-image: url('/assets/top-bg.svg');
+    background-size: cover;
+    // margin-top: -18px;
+    padding-top: 24px;
+}
 
-    .top-container {
-        border-bottom-left-radius: 12px;
-        border-bottom-right-radius: 12px;
-        background-color: #2A327D;
-        padding-bottom: 10px;
-        background-image: url('/assets/top-bg.svg');
-        background-size: cover;
-        margin-top: -18px;
-        padding-top: 24px;
-    
-        .title {
-            color: #fff;
-            padding-top: 20px;
-            padding-left: 30px;
-            margin-bottom: 0;
-            font-size: 24px;
-        }
+.recent-transactions {
+    background-color: #fff;
+    margin: 24px;
+
+    .title {
+        margin: 0px;
+        font-size: 14px;
+    }
+}
+
+.weekly-container {
+    background-color: #fff;
+    padding: 0px 24px;
+
+    .title {
+        margin: 0px;
+        font-size: 14px;
     }
     
-    .recent-transactions {
-        background-color: #fff;
-        margin: 24px;
+    .progress-container {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        margin-top: 14px;
     
-        .title {
-            margin: 0px;
-            font-size: 14px;
-        }
-    }
-    
-    .weekly-container {
-        background-color: #fff;
-        padding: 0px 24px;
-    
-        .title {
-            margin: 0px;
-            font-size: 14px;
-        }
-        
-        .progress-container {
+        .weekly-progress {
+            width: 40px;
+            height: 120px;
             display: flex;
-            width: 100%;
-            justify-content: space-evenly;
-            margin-top: 14px;
+            flex-direction: column;
+            align-items: center;
         
-            .weekly-progress {
-                width: 40px;
-                height: 120px;
-                display: flex;
-                flex-direction: column;
-                align-items: center;
-            
-                .label {
-                    font-size: 13px;
-                    color: #C0C2D1;
-                    margin-top: 4px;
-                }
+            .label {
+                font-size: 13px;
+                color: #C0C2D1;
+                margin-top: 4px;
             }
         }
     }
-    
-    .tab-bar {
-        background-color: #fff;
-        width: 100%;
-        height: 95px;
-    }
+}
+
+.tab-bar {
+    background-color: #fff;
+    width: 100%;
+    height: 95px;
 }

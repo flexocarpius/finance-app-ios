@@ -26,13 +26,13 @@
     </div>
     <div class="form">
       <div class="form-control">
-        <app-select label="Category" placeholder="Select a Category"></app-select>
+        <app-select label="Category" placeholder="Select a Category" [options]="categoryOptions" [selected]="categorySelected" (onSelected)="onCategorySelected($event)"></app-select>
       </div>
       <div class="form-control">
         <app-switch title="Recurrent" subtitle="Daily, weekly, monthly" [selected]="true"></app-switch>
       </div>
       <div class="form-control">
-        <app-select label="Period" placeholder="Select a recurrent period"></app-select>
+        <app-select label="Period" placeholder="Select a recurrent period" [options]="periodOptions" [selected]="periodSelected" (onSelected)="onPeriodSelected($event)"></app-select>
       </div>
     </div>
     <div class="save-button-container">

@@ -18,7 +18,7 @@
     </div>
   </div>
   <app-toolbar [hidden]="categories?.length === 0" title="College Savings" subtitle="Data Analytics" position="left">
-    <div rightButtons>
+    <div slot="end">
       <app-rounded-button color="success">
         <ion-icon name="swap-horizontal-outline"></ion-icon>
       </app-rounded-button>
@@ -28,6 +28,8 @@
     <div class="chart-container">
       <div class="chart">
         <canvas baseChart chartType="doughnut" [labels]="labels" [datasets]="datasets" [options]="options" id="chart"></canvas>
+      </div>
+      <div class="message-container">
         <div class="message">
           <h4 class="title">This month</h4>
           <h5 class="subtitle">20 days</h5>

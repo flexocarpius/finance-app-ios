@@ -5,6 +5,7 @@
     align-items: center;
     margin-top: 48px;
     padding: 0px 24px;
+    justify-content: space-between;
 
     .left-button-container {
         z-index: 10;
@@ -41,7 +42,7 @@
             margin: 0;
 
             &.light {
-                color: #262D30;
+                color: #C0C2D1;
             }
     
             &.dark {

@@ -8,6 +8,21 @@ import { CardDetailsModel } from 'src/app/models/card-details.model';
   styleUrls: ['./new-transaction.page.scss'],
 })
 export class NewTransactionPage implements OnInit {
+  categoryOptions = [
+    'Category 1',
+    'Category 2',
+    'Category 3',
+    'Category 4',
+    'Category 5',
+  ];
+  periodOptions = [
+    'Daily',
+    'Weekly',
+    'Monthly',
+    'Bimonthly'
+  ];
+  categorySelected = '';
+  periodSelected = ''
   @Input() card: CardDetailsModel;
   value: string;
 
@@ -26,6 +41,16 @@ export class NewTransactionPage implements OnInit {
 
   onChangeType(type: 'income' | 'expense') {
     this.type = type;
+  }
+
+  onCategorySelected(option: any) {
+    const value = option.Category.value;
+    this.categorySelected = value;
+  }
+
+  onPeriodSelected(option: any) {
+    const value = option.Period.value;
+    this.periodSelected = value;
   }
 
   onSave() {

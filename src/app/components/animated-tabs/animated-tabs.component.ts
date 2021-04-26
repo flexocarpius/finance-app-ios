@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output, ViewEncapsulation } fro
   styleUrls: ['./animated-tabs.component.scss'],
 })
 export class AnimatedTabsComponent implements OnInit {
-  @Input() tab: string;
+  @Input() tab: string = 'overview';
   @Output() change = new EventEmitter();
 
   constructor() { }

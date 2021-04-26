@@ -4,23 +4,25 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content fullscreen="true">
-  <div class="top-container">
-    <app-toolbar title="Overview" position="left" color="dark"></app-toolbar>
-    <app-card-list (addExpenseClick)="onAddExpenseClick($event)"></app-card-list>
-  </div>
-  <div class="recent-transactions">
-    <h4 class="title">Recent transactions</h4>
-    <app-transaction-row *ngFor="let transaction of transactions" [transaction]="transaction"></app-transaction-row>
-  </div>
-  <div class="weekly-container">
-    <h4 class="title">Weekly Report</h4>
-    <div class="progress-container">
-      <div class="weekly-progress" *ngFor="let day of days">
-        <app-vertical-progress-bar [percent]="day.percent"></app-vertical-progress-bar>
-        <span class="label">{{ day.label }}</span>
+<ion-content>
+  <div class="container" slot="fixed">
+    <div class="top-container">
+      <app-toolbar title="Overview" position="left" color="dark"></app-toolbar>
+      <app-card-list (addExpenseClick)="onAddExpenseClick($event)"></app-card-list>
+    </div>
+    <div class="recent-transactions">
+      <h4 class="title">Recent transactions</h4>
+      <app-transaction-row *ngFor="let transaction of transactions" [transaction]="transaction"></app-transaction-row>
+    </div>
+    <div class="weekly-container">
+      <h4 class="title">Weekly Report</h4>
+      <div class="progress-container">
+        <div class="weekly-progress" *ngFor="let day of days">
+          <app-vertical-progress-bar [percent]="day.percent"></app-vertical-progress-bar>
+          <span class="label">{{ day.label }}</span>
+        </div>
       </div>
     </div>
+    <div class="tab-bar"></div>
   </div>
-  <div class="tab-bar"></div>
 </ion-content>

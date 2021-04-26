@@ -1,6 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { CardDetailsModel } from 'src/app/models/card-details.model';
+import { StatusBarService } from 'src/app/services/status-bar.service';
 
 @Component({
   selector: 'app-new-transaction',
@@ -28,9 +29,17 @@ export class NewTransactionPage implements OnInit {
 
   type: 'income' | 'expense' = 'income';
 
-  constructor(private modal: ModalController) { }
+  constructor(private modal: ModalController, private statusBar: StatusBarService) { }
 
   ngOnInit() {
+  }
+
+  ionViewDidEnter() {
+    this.statusBar.setLightStatusBar();
+  }
+
+  ionViewWillLeave() {
+    this.statusBar.setDarkStatusBar();
   }
 
   onBack() {

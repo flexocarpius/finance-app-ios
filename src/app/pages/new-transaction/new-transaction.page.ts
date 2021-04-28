@@ -1,7 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
-import { CardDetailsModel } from 'src/app/models/card-details.model';
-import { StatusBarService } from 'src/app/services/status-bar.service';
+import { CardDetailsModel } from '../../models/card-details.model';
 
 @Component({
   selector: 'app-new-transaction',
@@ -23,23 +22,16 @@ export class NewTransactionPage implements OnInit {
     'Bimonthly'
   ];
   categorySelected = '';
-  periodSelected = ''
+  periodSelected = '';
+  recurrentSelected = false;
   @Input() card: CardDetailsModel;
   value: string;
 
   type: 'income' | 'expense' = 'income';
 
-  constructor(private modal: ModalController, private statusBar: StatusBarService) { }
+  constructor(private modal: ModalController) { }
 
   ngOnInit() {
-  }
-
-  ionViewDidEnter() {
-    this.statusBar.setLightStatusBar();
-  }
-
-  ionViewWillLeave() {
-    this.statusBar.setDarkStatusBar();
   }
 
   onBack() {
@@ -60,6 +52,12 @@ export class NewTransactionPage implements OnInit {
   onPeriodSelected(option: any) {
     const value = option.Period.value;
     this.periodSelected = value;
+  }
+
+  onRecurrentChange(enabled: boolean) {
+    if (enabled === true || enabled === false) {
+      this.recurrentSelected = enabled;
+    }
   }
 
   onSave() {

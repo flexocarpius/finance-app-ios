@@ -5,7 +5,13 @@
 </ion-header>
 
 <ion-content>
-  <app-toolbar [backButton]="true" [title]="card.title" subtitle="New transaction" (onBack)="onBack()" position="center"></app-toolbar>
+  <app-toolbar [title]="card.title" subtitle="New transaction" position="center">
+    <div slot="start">
+      <ion-button (click)="onBack()" fill="clear">
+        <ion-icon name="arrow-back-outline"></ion-icon>
+      </ion-button>
+    </div>
+  </app-toolbar>
   <div class="container">
     <div class="value-input-container">
       <div class="value-input">
@@ -29,9 +35,9 @@
         <app-select label="Category" placeholder="Select a Category" [options]="categoryOptions" [selected]="categorySelected" (onSelected)="onCategorySelected($event)"></app-select>
       </div>
       <div class="form-control">
-        <app-switch title="Recurrent" subtitle="Daily, weekly, monthly" [selected]="true"></app-switch>
+        <app-switch title="Recurrent" subtitle="Daily, weekly, monthly" (change)="onRecurrentChange($event)"></app-switch>
       </div>
-      <div class="form-control">
+      <div class="form-control" *ngIf="recurrentSelected === true">
         <app-select label="Period" placeholder="Select a recurrent period" [options]="periodOptions" [selected]="periodSelected" (onSelected)="onPeriodSelected($event)"></app-select>
       </div>
     </div>

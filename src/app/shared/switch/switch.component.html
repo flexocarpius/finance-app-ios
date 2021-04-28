@@ -4,7 +4,7 @@
     <h5 class="subtitle">{{ subtitle }}</h5>
   </div>
   <label class="switch">
-    <input type="checkbox" [checked]="selected">
+    <input type="checkbox" [checked]="selected" (change)="onChange($event)">
     <span class="slider round"></span>
   </label>
 </div>

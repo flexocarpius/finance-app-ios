@@ -35,6 +35,14 @@ export class SandboxService {
   }
 
   getChartData() {
-    
+    return {
+      labels: [
+        'Expenses',
+        'Transfer',
+        'Fees',
+        'Money Saving'
+      ],
+      data: [1409, 6595, 652, 3840]
+    }
   }
 }

@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import * as Chart from 'chart.js';
 import ChartDataLabels from 'chartjs-plugin-datalabels';
-import { CategoryModel } from 'src/app/models/category.model';
+import { CategoryModel } from '../../models/category.model';
+import { SandboxService } from '../../services/sandbox.service';
 
 @Component({
   selector: 'app-analytics',
@@ -17,15 +18,13 @@ export class AnalyticsPage implements OnInit {
   datasets: any;
   categories: CategoryModel[];
 
-  constructor() { }
+  constructor(private sb: SandboxService) { }
 
   ngOnInit() {
-    this.initChart([
-      'Expenses',
-      'Transfer',
-      'Fees',
-      'Money Saving'
-    ], [1409, 6595, 652, 3840]);
+    const chartData = this.sb.getChartData();
+    this.initChart(chartData.labels, chartData.data);
+
+    this.categories = this.sb.getCategories();
   }
 
   initChart(labels, data) {
